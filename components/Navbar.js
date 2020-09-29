@@ -16,6 +16,7 @@ import {
 	MenuDivider,
 	MenuOptionGroup,
 	MenuItemOption,
+	Icon,
 } from '@chakra-ui/core';
 
 export default function Navbar(props) {
@@ -45,18 +46,22 @@ export default function Navbar(props) {
 
 				<Flex align='center' padding='0.5rem'>
 					<Flex align='center' ml={5} mr={5}>
-						<Heading>
-							<Menu>
-								<MenuButton as='h1'>J.Wills</MenuButton>
-								<MenuList>
-									<MenuItem>
-										<Link href='/projects'>Projects</Link>
-									</MenuItem>
-									<MenuDivider />
-									<MenuItem>CV</MenuItem>
-								</MenuList>
-							</Menu>
-						</Heading>
+						<Menu>
+							<Heading>
+								<MenuButton as='h1'>
+									<Icon name='chevron-down' />
+									J.Wills
+									<Icon name='chevron-down' />
+								</MenuButton>
+							</Heading>
+							<MenuList>
+								<MenuItem>
+									<Link href='/projects'>Projects</Link>
+								</MenuItem>
+								<MenuDivider />
+								<MenuItem>CV</MenuItem>
+							</MenuList>
+						</Menu>
 					</Flex>
 				</Flex>
 
